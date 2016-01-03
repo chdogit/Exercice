@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <title>Jeu de plateau - Tour par tour</title>
+    </head>
+    
+    <body>
+    <div class="container-fluid-perso">  
+        <div class="row">
+            <div id="control-buttons" class="col-md-12">
+                    <button type="button" name="playGame">Nouvelle Partie</button>
+            </div>
+        </div> 
+        <div class="row pt"> 
+        
+                <!-- Controls joueur 1 -->
+                <div id="player1-controls" class="player-controls col-md-3">
+                    <div class="player-name"><h1>René</h1></div>
+                    <div class="player-hp col-md-12 text-center"></div>
+                    <div class="row player-status mb">
+                            <div class="player-weapon-icon"></div>
+                            <div class="player-text-info">                            
+                                <div class="player-weapon-specs"></div>
+                            </div>
+                    </div>    
+                 <!-- Controls action joueur 1 -->   
+                        <div class="combat-buttons col-md-12 pt">
+                        <button class="mb" type="button" name="attack">Attaquer</button>
+                        <button type="button" name="defense">Défendre</button>
+                    </div>
+                    
+                </div>
+
+                 <!-- Controls joueur 2 -->
+                <div id="player2-controls" class="player-controls col-md-3 pull-right">
+                    <div class="player-name"><h1>Bugs</h1></div>
+                   <div class="player-hp col-md-12 text-center"></div>
+                    <div class="row player-status mb">
+                            <div class="player-weapon-icon"></div>
+                            <div class="player-text-info">                            
+                                <div class="player-weapon-specs"></div>
+                            </div>
+                    </div>    
+                 <!-- Controls action joueur 1 -->   
+                        <div class="combat-buttons col-md-12 pt">
+                        <button class="mb" type="button" name="attack">Attaquer</button>
+                        <button type="button" name="defense">Défendre</button>
+                    </div>
+                    
+                </div>
+            
+                  <!-- tableau -->
+                 <div id="board" class="col-md-6">
+                </div>
+            
+            </div>
+    </div>
+       
+        
+        <!--Librairie jQuery & Polyfills-->
+        <script type="text/javascript" src="librairies/jquery-2.1.4.js"></script>
+        <script type="text/javascript" src="librairies/polyfill.js"></script>
+        <!--Import des Classes JS-->
+        <script type="text/javascript" src="classes/cell.js"></script>
+        <script type="text/javascript" src="classes/board.js"></script>
+        <script type="text/javascript" src="classes/weapon.js"></script>
+		<script type="text/javascript" src="classes/player.js"></script>
+        <!--Scripts de Contrôle et d'Affichage du Jeu-->
+        <script type="text/javascript" src="game/game-engine.js"></script>
+        <script type="text/javascript" src="game/game-display.js"></script>
+        <script type="text/javascript" src="game/game-controller.js"></script>
+    </body>
+</html>
